@@ -5,21 +5,31 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding:20px;
-    padding-top: 40px;
-    font-weight: 400;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+  padding-top: 40px;
+  font-weight: 400;
+  position: relative;
+  z-index: 20; /* sit above overlays */
 }
 .nav-toggle {
-  display: none;
+  /* hide visually but keep accessible */
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
 }
 nav {
-    position: relative;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 30; /* ensure links are clickable above overlays */
 }
 
 nav a {
@@ -69,6 +79,11 @@ footer {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  position: relative;
+  z-index: 40; /* ensure hamburger is on top */
+}
+.nav-toggle {
+    display: none;
 }
 
 .nav-toggle-label span,
