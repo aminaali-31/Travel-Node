@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/static/nav.css">
+    <link rel="stylesheet" href="/static/contact.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <section class="main">
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/tours">Hot tours</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <button class="blue">Book Now</button>
+    </header>
+
+    <h2 class="section-tag">CONTACT US</h2>
+    <h1>We'd Love to Hear From You</h1>
+    <hr>
+    <p>Have questions, feedback, or just want to say hello? Our team at <strong>Travel</strong> is here to assist you.</p>
+
+    <% if (messages && messages.length > 0) { %>
+        <% messages.forEach(msg => { %>
+            <script>
+                Swal.fire({
+                    icon: "success",
+                    title: "Done!",
+                    text: "<%= msg %>"
+                });
+            </script>
+        <% }) %>
+    <% } %>
+    </section>
+    <section class="contact">
+        <div class="details">
+            <div class="item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>    
+                <p>123-frans Street, New york</p>
+            </div>
+            <div class="item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>    
+                <p>+123 456 7890</p>
+            </div>
+            <div class="item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>    
+                <p>abc@gmail.com</p>
+            </div>
+        </div>
+        <form method="POST" action="/send-mail">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="blue">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Travel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

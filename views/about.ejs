@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/static/nav.css">
+    <link rel="stylesheet" href="/static/about.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <section class="main">
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/tours">Hot tours</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <button class="blue">Book Now</button>
+    </header>
+    <h2 class="section-tag">ABOUT US</h2>
+    <h1>More Than Trips. We Create Memories.</h1>
+    <hr>
+    <p>Travel is more than destinations—it's about moments. At <strong>Travel</strong>, 
+        we believe every journey should feel effortless, exciting, and meaningful. 
+        That's why we craft travel experiences that match your style, budget, and 
+        dreams.</p>
+ </section>
+    <section class="timeline-section">
+        <h2 class="timeline-title">Our Journey</h2>
+        <div class="timeline">
+
+            <div class="timeline-item left">
+            <div class="content">
+                <h3>2018 – The First Trip</h3>
+                <p>It all started with one backpack and a dream to explore beyond maps.</p>
+            </div>
+            </div>
+
+            <div class="timeline-item right">
+            <div class="content">
+                <h3>2019 – Growing the Tribe</h3>
+                <p>Friends became travelers, travelers became family.</p>
+            </div>
+            </div>
+
+            <div class="timeline-item left">
+            <div class="content">
+                <h3>2021 – Across Borders</h3>
+                <p>We crossed countries, cultures, and comfort zones.</p>
+            </div>
+            </div>
+
+            <div class="timeline-item right">
+            <div class="content">
+                <h3>2024 – Purposeful Travel</h3>
+                <p>Focusing on sustainable, meaningful, and local experiences.</p>
+            </div>
+            </div>
+
+        </div>
+    </section> 
+
+    <section class="metrics">
+        <h2>Our Success in Numbers</h2>
+        <div class="contain">
+            <div class="content">
+                <span>
+                    <h3 class="counter" data-target="500">0+</h3>
+                    <p>Tours Completed</p>
+                </span>
+            </div>
+            <div class="content">
+                <span>
+                    <h3 class="counter" data-target="10000">0+</h3>
+                    <p>Travelers Inspired</p>
+                </span>
+            </div>
+            <div class="content">
+                <span>
+                    <h3 class="counter" data-target="10">0+</h3>
+                    <p>Years of experience</p>
+                </span>
+            </div>
+            <div class="content">
+                <span>
+                    <h3 class="counter" data-target="25">0+</h3>
+                    <p>Countries explored</p>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Select all counters
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+      let currentCount = 0;
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target'); // convert to number
+        const increment = Math.ceil(target / 10); // 50 steps for smoother animation
+
+        if(currentCount < target) {
+          currentCount += increment;
+          if(currentCount > target) currentCount = target;
+          counter.innerText = currentCount.toLocaleString() + '+';
+          setTimeout(updateCount, 100); // update every 100ms
+        } else {
+          counter.innerText = target.toLocaleString() + '+';
+        }
+
+      };
+      updateCount();
+    });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Travel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

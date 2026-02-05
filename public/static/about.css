@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.main {
+    background: url("./images/back13.jpg");
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.4),
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.section-tag{
+    position: relative;
+    text-align: center;
+    font-size: 6rem;
+    margin: 0 auto;
+    padding: 5vh 2vw;
+    font-weight: 600;
+    padding-top: 20vh;
+}
+.main h1 {
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    margin: 3vh 2vw;
+    word-spacing: 0.5rem;
+}
+.main p {
+    color:rgba(240, 234, 234, 0.365);
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.9;
+    padding: 2vh;
+    text-align: start;
+}
+strong {
+    color:rgba(255, 255, 255, 0.365);
+    font-weight: 600;
+}
+.main hr {
+    width:45%;
+    margin: 0 auto;
+}
+.timeline-section {
+    background: linear-gradient(rgba(17, 17, 17, 0.543) , rgba(39, 37, 37, 0.534) ), url("./images/back7.webp");
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 20px;
+    overflow: visible;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 80px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Center line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: #f57c00;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline items */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: -80px;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Dots */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  width: 18px;
+  height: 18px;
+  background: #f57c00;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item.left::before {
+  right: -9px;
+}
+
+.timeline-item.right::before {
+  left: -9px;
+}
+
+/* Content box */
+.content {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.content h3 {
+  margin-bottom: 10px;
+  color: #fbc02d;
+}
+
+.content p {
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+.metrics {
+    background: linear-gradient(rgba(17, 17, 17, 0.543) , rgba(39, 37, 37, 0.534) ), url("./images/back10.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.metrics h2 {
+    font-size: 40px;
+    text-align: center;
+}
+.contain {
+    display: flex;
+    justify-content: space-between;
+    align-items:center
+}
+.metrics i {
+    font-size: 20px;
+    display: inline-block;    /* treat as block to adjust alignment */
+    vertical-align: middle;   /* aligns to middle of container */
+    transform: rotate(0deg);
+}
+.contain .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+.contain .content h3 {
+    font-size: 30px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+*{
+    overflow-x: hidden;
+}
+.main {
+    min-height: 80vh;
+}
+.main h1 {
+    font-size: 16px;
+    margin: 5px;
+    word-spacing: 2px;
+}
+.section-tag {
+    font-size: 55px;
+}
+.main p {
+    font-size: 18px;
+}
+.main hr {
+    width:90%;
+}
+.timeline::after {
+    left: 20px;
+}
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    margin-left: 10px; /* space for dots */
+}
+.timeline-item {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.timeline-item.right {
+    left: 10px;
+}
+.timeline-item.left {
+    left: 2px;
+}
+.timeline-item.left::before{
+    left: 10px;
+}
+.timeline-item.right::before{
+    left: 2px;
+}
+.timeline-section {
+    padding: 100px 5px;
+}
+}
