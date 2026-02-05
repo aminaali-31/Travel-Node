@@ -14,15 +14,19 @@
 <body>
     <section class="main">
     <header>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
         <nav>
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/tours">Hot tours</a>
             <a href="/contact">Contact</a>
         </nav>
-        <button class="blue">Book Now</button>
+        <button class="blue" onclick="window.location.href='/form'">Book Now</button>
     </header>
-
+<div class="content">
     <h2 class="section-tag">CONTACT US</h2>
     <h1>We'd Love to Hear From You</h1>
     <hr>
@@ -39,6 +43,7 @@
             </script>
         <% }) %>
     <% } %>
+</div>
     </section>
     <section class="contact">
         <div class="details">

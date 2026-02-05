@@ -13,13 +13,19 @@
 <body>
     <section class="main">
     <header>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
         <nav>
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/tours">Hot tours</a>
             <a href="/contact">Contact</a>
         </nav>
+        <a href="/form">
         <button class="blue">Book Now</button>
+        </a>
     </header>
      <div class="head">
             <div class="social">
@@ -77,7 +83,7 @@
                     <li>Round trip tickets + transfer to the hotel</li>
                     <li><span>1100 $</span> for two</li>
                 </ul>
-                <button class="blue">BOOK A TOUR</button>
+                <button class="blue" onclick="window.location.href='/form'">BOOK A TOUR</button>
             </div>
             <div class="gallery">
                 <img src="/static/images/newz1.jpg" class="img-1">
@@ -95,7 +101,7 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, numquam commodi! 
                     Nulla, molestias illo iste modi vitae veritatis iure impedit, adipisci voluptatum rerum placeat. 
                     Asperiores, omnis rerum? Soluta, neque iure?</p>
-                <button class="blue">Read more</button>
+                <button class="blue" onclick="window.location.href='/about'">Read more</button>
                 <div class="metrics">
                     <p><span>500</span> tours</p>
                     <p><span>10</span> Years</p>
@@ -116,7 +122,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod animi reiciendis nam minima corporis 
                     repudiandae unde, dignissimos exercitationem veritatis qui? Placeat laboriosam magnam fuga veritatis 
                     nihil maiores vero enim consectetur!</p>
-                    <button class="blue" id="read">Read more</button>
+                    <button class="blue" id="read" onclick="window.location.href='/about'">Read more</button>
             </div>
             <img src="static/images/new1.jpg">
         </div>
@@ -192,7 +198,7 @@
         </div>
         <div class="form">
             <h5>SEND US A COOL REQUEST TO BOOK A TRIP</h5>
-            <form method="POST" action="#">
+            <form method="POST" action="/send-mail">
                 <input type="text" placeholder="Name" name="name">
                 <input type="email" placeholder="Email" name="email">
                 <input type="text" placeholder="Message" name="message">

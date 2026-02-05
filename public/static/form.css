@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.598) , rgba(0, 0, 0, 0.132)),
+    url("./images/back17.jpg");
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: White;
+    
+}
+form {
+    background-color: rgba(39, 37, 37, 0.575);
+    display: flex;
+    flex-direction: column;
+    width:500px;
+    gap:20px;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+form input, 
+form textarea,
+form select {
+    border: none;
+    border-bottom: gray 1px solid;
+    background: transparent;
+    min-height: 40px;
+    font-size: 1rem;
+    color: white;
+}
+form button.blue {
+    width: 200px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+form select option {
+    color: white;
+    background-color:  rgba(39, 37, 37, 0.575);
+    border-bottom: 8px;
+}
+.blue
+{
+    display: inline-block;
+    width: 150px;
+    background-color: rgba(0, 217, 255, 0.753);
+    border:1px solid rgba(0, 217, 255, 0.753);
+    border-radius: 10px;
+    padding: 1.5vh 2vh;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.blue:hover{
+    background-color:rgba(0, 217, 255, 0);
+    transition: 1.5s ease-in-out;
+}
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+a.blue {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+@media (max-width:750px)
+{
+    form {
+        width:300px;
+    }
+}

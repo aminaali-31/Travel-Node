@@ -6,12 +6,14 @@ body{
     background-position: center;
     background-size: cover;
 }
-.main {
+.content {
     gap:20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
+    position: relative;
+    justify-content: center;
 }
 .section-tag {
     font-size: 3rem;
@@ -47,6 +49,7 @@ form button.blue {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     gap:150px;
     margin: 30px;
 }
@@ -65,4 +68,18 @@ form button.blue {
     align-items: center;
     gap:10px;
    
+}
+
+@media (max-width:750px) {
+    .main {
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .main h1 {
+        font-size: 23px;
+    }
+    .main p {
+        text-align: center;
+    }
 }

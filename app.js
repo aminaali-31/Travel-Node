@@ -49,6 +49,10 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
+app.get("/form", (req, res) => {
+  res.render("form"); // form.ejs
+});
+
 app.post('/send-mail', async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -59,7 +63,7 @@ app.post('/send-mail', async (req, res) => {
 
   try {
     await sendEmail(name, email, message);
-    req.session.messages = ['Message sent successfully!'];
+    req.session.messages = ['Message sent successfully! You"ll be contacted soon.'];
     res.redirect('/contact');
   } catch (error) {
     console.error('Email error:', error);

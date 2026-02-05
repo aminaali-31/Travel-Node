@@ -4,17 +4,27 @@
     color:white;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .main {
     background: url("./images/back13.jpg");
     min-height: 90vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 .main::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,0.75),
@@ -23,6 +33,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  pointer-events: none;
 }
 .section-tag{
     position: relative;
@@ -161,7 +172,8 @@ strong {
 .contain {
     display: flex;
     justify-content: space-between;
-    align-items:center
+    align-items:center;
+    flex-wrap: wrap;
 }
 .metrics i {
     font-size: 20px;
@@ -182,11 +194,13 @@ strong {
     text-align: center;
 }
 @media (max-width: 768px) {
-*{
+body {
     overflow-x: hidden;
 }
 .main {
     min-height: 80vh;
+    position: relative;
+    overflow: hidden;
 }
 .main h1 {
     font-size: 16px;

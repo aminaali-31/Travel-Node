@@ -11,6 +11,10 @@ header {
     padding:20px;
     padding-top: 40px;
     font-weight: 400;
+    position: relative;
+}
+.nav-toggle {
+  display: none;
 }
 nav {
     position: relative;
@@ -23,7 +27,6 @@ nav a {
     text-decoration: none;
     font-size: 1rem;
 }
-
 nav a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -33,7 +36,7 @@ nav a:hover {
 .main button {
     position: absolute;
     right:0;
-    margin: 3vh;
+    
     padding:8px 25px;
     font-size: 14px;
     font-weight: 500;
@@ -60,4 +63,80 @@ footer {
     text-align: center;
     margin: 0 auto;
     padding: 10px 0;
+}
+
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-label span::before {
+  top: -8px;
+}
+
+.nav-toggle-label span::after {
+  top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: flex;
+  }
+  header {
+    justify-content: flex-start;
+  }
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #93999e82;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    z-index: 10;
+  }
+
+  nav a {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Show menu when checked */
+  .nav-toggle:checked + .nav-toggle-label + nav {
+    max-height: 500px; /* enough to show all links */
+  }
+  .nav-toggle-label{
+    overflow:visible !important;
+  }
+  .main button {
+    position: absolute;
+    right: 0;
+    top:20px;
+    margin: 10px !important;
+    padding:8px 25px;
+    font-size: 14px;
+    font-weight: 500;
+}
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="static/form.css">
+</head>
+<body>
+    <form method="POST" action="/send-email">
+        <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="type">Tour Option</label>
+            <select>
+                <option>Beach Paradise in Hawaii</option>
+                <option>Mountain Adventure in NewZealend</option>
+                <option>Cultural Exploration with Chinese</option>
+                <option>Safari Expedition in Africa</option>
+            </select>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <div class="btns">
+            <button type="submit" class="blue">Book Tour</button>
+            <a href="/" class="blue">Home</a>
+            </div>
+    </form>
+</body>
+</html>
