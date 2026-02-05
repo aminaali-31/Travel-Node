@@ -82,10 +82,6 @@ footer {
   position: relative;
   z-index: 40; /* ensure hamburger is on top */
 }
-.nav-toggle {
-    display: none;
-}
-
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
