@@ -9,7 +9,7 @@ html, body {
   width: 100%;
 }
 .main {
-    background-image: url("./images/back2.avif");
+    background-image: url("./images/back2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
