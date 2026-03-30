@@ -99,3 +99,14 @@ async function sendEmail(name, senderEmail, message) {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
+process.on("SIGTERM", async () => {
+  console.log("Shutting down gracefully...");
+  process.exit(0);
+});
+
+process.on("SIGINT", async () => {
+  console.log("Interrupted, shutting down...");
+  process.exit(0);
+});
